@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 
 import operator
+import readline
+from termcolor import colored
 
 OPERATORS = {
 	'+': operator.add,
@@ -10,6 +12,9 @@ OPERATORS = {
 	'^': operator.pow,
 	'%': operator.mod,
 }
+
+def functioncall(arg):
+	print("This is a function call")
 
 def calculate(arg):
 	stack = list()
@@ -29,8 +34,14 @@ def calculate(arg):
 
 def main():
 	while True:
-		result = calculate(input('rpn calc> '))
-		print("Result: ", result)
+		result = calculate(raw_input('rpn calc> '))
+		if result > 0:
+			print colored("Result: ", "blue")
+			print colored(result, "green")
+		else:
+			print colored('Result: ', 'blue')
+			print colored(result, 'red')
+		
 
 if __name__ == '__main__':
 	main()
