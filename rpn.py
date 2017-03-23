@@ -13,8 +13,6 @@ OPERATORS = {
 	'%': operator.mod,
 }
 
-def functioncall(arg):
-	print("This is a function call")
 
 def calculate(arg):
 	stack = list()
