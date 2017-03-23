@@ -1,6 +1,5 @@
 language: python
 python: "3.5"
 install: pip install coveralls
-script: coverage run python3 -m unittest
-script: coverage run unittest
+script: coverage run -m unittest
 after_success: coveralls
