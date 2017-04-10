@@ -2,7 +2,7 @@
 
 import operator
 import readline
-from termcolor import colored
+#from termcolor import colored
 
 OPERATORS = {
 	'+': operator.add,
@@ -32,13 +32,16 @@ def calculate(arg):
 
 def main():
 	while True:
-		result = calculate(raw_input('rpn calc> '))
-		if result > 0:
-			print colored("Result: ", "blue")
-			print colored(result, "green")
-		else:
-			print colored('Result: ', 'blue')
-			print colored(result, 'red')
+		result = calculate(input('rpn calc> '))
+		print("Result: ", result)
+
+		#result = calculate(raw_input('rpn calc> '))
+		#if result > 0:
+		#	print colored("Result: ", "blue")
+		#	print colored(result, "green")
+		#else:
+		#	print colored('Result: ', 'blue')
+		#	print colored(result, 'red')
 		
 
 if __name__ == '__main__':
